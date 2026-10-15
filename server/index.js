@@ -16,6 +16,10 @@ app.use(
 
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("To-Do API is running!");
+});
+
 // Create a todo
 app.post("/todos", async (req, res) => {
   try {
